@@ -5,10 +5,12 @@ from source.model.Circuit import Circuit
 from source.model.Result import Result
 from source.model.CSVToEntity import CSVToEntity
 
+
+
 csv_to_entity = CSVToEntity()
 
 races = csv_to_entity.csv_process(
-    "C:/Users/adm/Desktop/csv/races.csv",
+    "../source/data/races.csv",
     lambda row: [
         Race(
             row[0],
@@ -69,3 +71,5 @@ constructors = csv_to_entity.csv_process(
         )
     ]
 )
+
+print(races)
