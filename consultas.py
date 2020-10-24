@@ -91,8 +91,7 @@ idades = {"17 - 20":0,
           "29 - 32": 0,
           "32 - 35": 0,
           "35 - 38": 0,
-          "38 - 39": 0,
-          "39 - 42": 0}
+          "38 - 41": 0}
 
 idades_valores = []
 
@@ -144,8 +143,8 @@ idades_campeonatos = {"17 - 20":0,
           "29 - 32": 0,
           "32 - 35": 0,
           "35 - 38": 0,
-          "38 - 39": 0,
-          "39 - 42": 0}
+          "38 - 41": 0 
+                 }
 
 for classificacao in classificacoes:
     for classificacao1 in classificacao:
