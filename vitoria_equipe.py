@@ -9,11 +9,10 @@ for key,value in equipes.items():
         data["x"].append(key)
         data["y"].append(value)
 
-data["x"] = sorted(data["x"])
-data["y"] = sorted(data["y"])
+
 plt.title("Vitórias por equipe (2006-2018)")
-plt.xlabel("Vitórias")
-plt.ylabel("Equipes")
+plt.xlabel("Equipes")
+plt.ylabel("Vitórias")
 
 plt.bar((data["x"]), (data["y"]))
 
