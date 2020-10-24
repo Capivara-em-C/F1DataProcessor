@@ -13,8 +13,8 @@ for key,value in paises.items():
 
 data["x"] = sorted(data["x"])
 data["y"] = sorted(data["y"])
-plt.title("Vitórias por equipe (2006-2018)")
-plt.xlabel("Equipes")
+plt.title("Vitórias por País (2006-2018)")
+plt.xlabel("País")
 plt.ylabel("Vitorias")
 
 
