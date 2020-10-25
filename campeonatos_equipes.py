@@ -1,17 +1,8 @@
-from consultas import equipes_campeonatos
-import matplotlib.pyplot as plt
+from consultas import equipes_campeonatos, plot_data
 
-data = {"x":[], "y":[]}
-
-
-for key,value in equipes_campeonatos.items():
-    data["x"].append(key)
-    data["y"].append(value)
-
-
-plt.title("Campeonatos por equipe (2006-2019)")
-plt.xlabel("Equipes")
-plt.ylabel("Campeonatos")
-
-plt.bar((data["x"]), (data["y"]))
-plt.show()
+plot_data(
+    equipes_campeonatos.items(),
+    "Campeonatos Vencidos por equipe (2006-2019)",
+    "Equipes",
+    "Campeonatos Vencidos"
+)

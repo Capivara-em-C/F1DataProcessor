@@ -2,7 +2,8 @@ import csv
 
 
 class CSVToEntity:
-    def csv_process(self, path, row_to_entity_function):
+    @staticmethod
+    def csv_process(path, row_to_entity_function):
         entities = []
 
         with open(path, newline="", encoding='utf-8') as csvFile:

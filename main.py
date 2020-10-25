@@ -3,37 +3,39 @@ from source.model.Drivers import Driver
 from source.model.Constructor import Constructor
 from source.model.Circuit import Circuit
 from source.model.Result import Result
+from source.model.Classificacao import Classificacao
 from source.model.CSVToEntity import CSVToEntity
 
 csv_to_entity = CSVToEntity()
 
 races = csv_to_entity.csv_process(
-    "C:/Users/adm/Desktop/csv/races.csv",
-    lambda row: [
+    "source/data/races.csv",
+    lambda row:
         Race(
             row[0],
             row[1],
             row[2],
             row[3]
         )
-    ]
 )
 
+for race in races:
+    print(race)
+
 drivers = csv_to_entity.csv_process(
-    "C:/Users/adm/Desktop/csv/drivers.csv",
-    lambda row: [
+    "source/data/drivers.csv",
+    lambda row:
         Driver(
             row[0],
             row[1],
             row[6],
             row[7]
         )
-    ]
 )
 
 results = csv_to_entity.csv_process(
-    "C:/Users/adm/Desktop/csv/results.csv",
-    lambda row: [
+    "source/data/results.csv",
+    lambda row:
         Result(
             row[0],
             row[1],
@@ -44,28 +46,37 @@ results = csv_to_entity.csv_process(
             row[9],
             row[14]
         )
-    ]
 )
 
 circuits = csv_to_entity.csv_process(
-    "C:/Users/adm/Desktop/csv/circuits.csv",
-    lambda row: [
+    "source/data/circuits.csv",
+    lambda row:
         Circuit(
             row[0],
             row[2],
             row[3],
             row[4]
         )
-    ]
 )
 
 constructors = csv_to_entity.csv_process(
-    "C:/Users/adm/Desktop/csv/constructors.csv",
-    lambda row: [
+    "source/data/constructors.csv",
+    lambda row:
         Constructor(
             row[0],
             row[1],
             row[3],
         )
-    ]
+)
+
+classificacoes = csv_to_entity.csv_process(
+    "source/data/clasificacao.csv",
+    lambda row:
+        Classificacao(
+            row[0],
+            row[1],
+            row[2],
+            row[3],
+            row[4]
+        )
 )
