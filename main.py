@@ -19,9 +19,6 @@ races = csv_to_entity.csv_process(
         )
 )
 
-for race in races:
-    print(race)
-
 drivers = csv_to_entity.csv_process(
     "source/data/drivers.csv",
     lambda row:
@@ -70,7 +67,7 @@ constructors = csv_to_entity.csv_process(
 )
 
 classificacoes = csv_to_entity.csv_process(
-    "source/data/clasificacao.csv",
+    "source/data/classificacao.csv",
     lambda row:
         Classificacao(
             row[0],
